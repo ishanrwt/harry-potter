@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "pricedown";
+  src: url("./pricedown.otf");
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "pricedown";
+  background: #00072d;
+  margin: 0;
+}
+
+/* Non-home pages: Cinzel body type */
+.hp-site {
+  font-family: "Cinzel", Georgia, serif;
+}
+
+/* Gold Harry Potter brand title (non-home) */
+.hp-brand {
+  font-family: "Cinzel", Georgia, serif;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  background: linear-gradient(135deg, #E8D5A3 0%, #F5E6C8 45%, #C9A227 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Custom wand cursor — desktop / fine pointer only */
+@media (hover: hover) and (pointer: fine) {
+  html.hp-cursor,
+  html.hp-cursor * {
+    cursor: none !important;
+  }
+}
+
+.hp-wand {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform;
+  /* tip of the SVG sits on the pointer */
+  margin-left: -6px;
+  margin-top: -6px;
+}
+
+.hp-wand-svg {
+  display: block;
+  overflow: visible;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.55));
+}
+
+.hp-wand-tip {
+  transition: fill 0.15s ease;
+}
+
+.hp-wand-flare,
+.hp-wand-core {
+  opacity: 0;
+  transition: opacity 0.12s ease;
+}
+
+.hp-wand.is-lit .hp-wand-tip {
+  fill: #ffe566;
+}
+
+.hp-wand.is-lit .hp-wand-flare {
+  opacity: 0.65;
+  animation: hp-wand-pulse 0.5s ease-out infinite;
+}
+
+.hp-wand.is-lit .hp-wand-core {
+  opacity: 1;
+}
+
+.hp-wand.is-lit .hp-wand-svg {
+  filter:
+    drop-shadow(0 0 6px rgba(255, 229, 102, 0.95))
+    drop-shadow(0 0 14px rgba(255, 200, 40, 0.75))
+    drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
+}
+
+@keyframes hp-wand-pulse {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
