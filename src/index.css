@@ -13,6 +13,21 @@ body {
   font-family: "Cinzel", Georgia, serif;
 }
 
+/* Home scene designed ~25% oversized; scale to fit 100% zoom */
+.home-fit {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.home-fit-inner {
+  width: 125vw;
+  height: 125vh;
+  transform: scale(0.8);
+  transform-origin: top left;
+}
+
 /* Gold Harry Potter brand title (non-home) */
 .hp-brand {
   font-family: "Cinzel", Georgia, serif;

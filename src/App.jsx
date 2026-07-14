@@ -227,7 +227,7 @@ function App() {
       const harryEl = document.querySelector(".text h1:nth-child(1)");
       const potterEl = document.querySelector(".text h1:nth-child(2)");
       if (harryEl && potterEl) {
-        tl.fromTo(harryEl, { x: "-60vw" }, { x: "40vw", duration: 1.8, ease: "power3.out" }, 0);
+        tl.fromTo(harryEl, { x: "-60vw" }, { x: "48vw", duration: 1.8, ease: "power3.out" }, 0);
         tl.fromTo(potterEl, { x: "60vw" }, { x: "-33vw", duration: 1.8, ease: "power3.out" }, 0);
       }
 
@@ -390,33 +390,37 @@ function App() {
       )}
 
       {showContent && (
-        <div className="main w-full rotate-[-10deg] scale-[1.7]" ref={mainRef}>
-          <div className="landing overflow-hidden relative w-full h-screen bg-black">
-            <div className="navbar absolute top-0 left-0 z-[10] w-full py-10 px-10">
-              <Logo />
-            </div>
+        <div className="home-fit">
+          <div className="home-fit-inner">
+            <div className="main w-full h-full rotate-[-10deg] scale-[1.7]" ref={mainRef}>
+              <div className="landing overflow-hidden relative w-full h-full bg-black">
+                <div className="navbar absolute top-0 left-0 z-[10] w-full py-10 px-10">
+                  <Logo />
+                </div>
 
-            <div className="imagesdiv relative overflow-hidden w-full h-screen">
-              <img className="absolute sky scale-[1.5] rotate-[-20deg] top-0 left-0 w-full h-full object-cover" src="/sky.png" alt="" />
-              <img className="absolute scale-[1.8] rotate-[-3deg] bg top-0 left-0 w-full h-full object-cover" src="/bg.png" alt="" />
-              <div className="text text-white flex flex-col gap-3 absolute top-24 left-1/2 -translate-x-1/2 scale-[1.15] rotate-[-10deg]">
-                <h1 className="text-[8rem] leading-none -ml-16 font-black tracking-[0.08em]">Harry</h1>
-                <h1 className="text-[8rem] leading-none ml-10 font-black tracking-[0.08em]">Potter</h1>
-              </div>
-              <img className="absolute character -bottom-[150%] left-1/2 -translate-x-1/2 scale-[3] rotate-[-20deg]" src="/girlbg.png" alt="" />
-            </div>
+                <div className="imagesdiv relative overflow-hidden w-full h-full">
+                  <img className="absolute sky scale-[1.5] rotate-[-20deg] top-0 left-0 w-full h-full object-cover" src="/sky.png" alt="" />
+                  <img className="absolute scale-[1.8] rotate-[-3deg] bg top-0 left-0 w-full h-full object-cover" src="/bg.png" alt="" />
+                  <div className="text text-white flex flex-col gap-3 absolute top-20 left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg]">
+                    <h1 className="text-[12rem] leading-none -ml-40">Harry</h1>
+                    <h1 className="text-[12rem] leading-none ml-20">Potter</h1>
+                  </div>
+                  <img className="absolute character -bottom-[150%] left-1/2 -translate-x-1/2 scale-[3] rotate-[-20deg]" src="/girlbg.png" alt="" />
+                </div>
 
-            {showStoryBtn && (
-              <div className="absolute bottom-10 left-1/2 z-[20] -translate-x-1/2">
-                <button
-                  type="button"
-                  onClick={() => navigateWithTransition("/story", "Story")}
-                  className="inline-block bg-yellow-500 px-12 py-5 text-3xl text-black transition-transform hover:scale-105"
-                >
-                  Story
-                </button>
+                {showStoryBtn && (
+                  <div className="absolute bottom-10 left-1/2 z-[20] -translate-x-1/2">
+                    <button
+                      type="button"
+                      onClick={() => navigateWithTransition("/story", "Story")}
+                      className="inline-block bg-yellow-500 px-12 py-5 text-3xl text-black transition-transform hover:scale-105"
+                    >
+                      Story
+                    </button>
+                  </div>
+                )}
               </div>
-            )}
+            </div>
           </div>
         </div>
       )}
