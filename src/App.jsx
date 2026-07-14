@@ -7,7 +7,7 @@ import { usePageTransition } from "./components/PageTransition";
 // Memoized static components
 const Logo = memo(() => (
   <div className="logo flex gap-7">
-    <h3 className="text-4xl -mt-[8px] leading-none text-white">Harry Potter</h3>
+    <h3 className="hp-brand text-4xl -mt-[8px] leading-none">Harry Potter</h3>
   </div>
 ));
 
@@ -399,9 +399,9 @@ function App() {
             <div className="imagesdiv relative overflow-hidden w-full h-screen">
               <img className="absolute sky scale-[1.5] rotate-[-20deg] top-0 left-0 w-full h-full object-cover" src="/sky.png" alt="" />
               <img className="absolute scale-[1.8] rotate-[-3deg] bg top-0 left-0 w-full h-full object-cover" src="/bg.png" alt="" />
-              <div className="text text-white flex flex-col gap-3 absolute top-20 left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg]">
-                <h1 className="text-[12rem] leading-none -ml-40">Harry</h1>
-                <h1 className="text-[12rem] leading-none ml-20">Potter</h1>
+              <div className="text text-white flex flex-col gap-3 absolute top-24 left-1/2 -translate-x-1/2 scale-[1.15] rotate-[-10deg]">
+                <h1 className="text-[8rem] leading-none -ml-16 font-black tracking-[0.08em]">Harry</h1>
+                <h1 className="text-[8rem] leading-none ml-10 font-black tracking-[0.08em]">Potter</h1>
               </div>
               <img className="absolute character -bottom-[150%] left-1/2 -translate-x-1/2 scale-[3] rotate-[-20deg]" src="/girlbg.png" alt="" />
             </div>

@@ -1,20 +1,14 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "pricedown";
-  src: url("./pricedown.otf");
-}
-
 html,
 body {
   width: 100%;
   height: 100%;
-  font-family: "pricedown";
+  font-family: "Cinzel", Georgia, serif;
   background: #00072d;
   margin: 0;
 }
 
-/* Non-home pages: Cinzel body type */
 .hp-site {
   font-family: "Cinzel", Georgia, serif;
 }
